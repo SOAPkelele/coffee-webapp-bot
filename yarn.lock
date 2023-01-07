@@ -8169,6 +8169,7 @@ __metadata:
     eslint-plugin-valtio: ^0.6.1
     postcss: ^8.4.19
     preact: ^10.11.3
+    preact-router: ^4.1.0
     prettier: ^2.8.0
     react-scripts: ^5.0.1
     rollup-plugin-visualizer: ^5.8.3
@@ -12502,6 +12503,15 @@ __metadata:
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
   checksum: 62782723a385f92b7525f66d29614624de7c5643855423db3a5efd9287e677650300192749adddbbb6734cea9b1d5f5fd4f6ea00ca3f9a95dbbb88f835f5ca64
+  languageName: node
+  linkType: hard
+
+"preact-router@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "preact-router@npm:4.1.0"
+  peerDependencies:
+    preact: ">=10"
+  checksum: 5cde4340dd92562bbc9b6370471846a4ba11bc3678238fc68abfdad10bb3bdaf7e6379c281dfabbf220a7213670d74a6fc167abecee80ec1771f566316df2c2c
   languageName: node
   linkType: hard
 

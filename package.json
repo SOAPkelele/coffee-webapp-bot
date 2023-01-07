@@ -26,6 +26,7 @@
   "dependencies": {
     "@vitejs/plugin-react": "^2.2.0",
     "preact": "^10.11.3",
+    "preact-router": "^4.1.0",
     "unfetch": "^4.2.0",
     "valtio": "^1.7.6"
   },
