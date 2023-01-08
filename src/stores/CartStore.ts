@@ -2,9 +2,8 @@ import { CartItem } from 'models/CartItem'
 import { MenuItem } from 'models/MenuItem'
 import { derive } from 'valtio/utils'
 import { proxy } from 'valtio'
-import PersistableStore from 'stores/persistence/PersistableStore'
 
-class CartStore extends PersistableStore {
+class CartStore {
   items: CartItem[] = []
 
   addItem(newItem: MenuItem) {
@@ -54,7 +53,7 @@ class CartStore extends PersistableStore {
   }
 }
 
-const cartProxy = proxy(new CartStore()).makePersistent()
+const cartProxy = proxy(new CartStore())
 
 export default cartProxy
 
