@@ -83,21 +83,6 @@ export default function () {
         ))}
       </div>
       <MainButton />
-
-      <button
-        class="px-2 py-1 bg-telegram-button"
-        onClick={() => {
-          fetch('http://127.0.0.1:1337/payment/telegram')
-            .then((resp) =>
-              Telegram.WebApp.showAlert(`success: ${JSON.stringify(resp)}`)
-            )
-            .catch((resp) =>
-              Telegram.WebApp.showAlert(`error: ${JSON.stringify(resp)}`)
-            )
-        }}
-      >
-        Send request to backend
-      </button>
     </Root>
   )
 }

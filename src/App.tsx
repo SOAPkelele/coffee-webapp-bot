@@ -1,4 +1,5 @@
 import { useEffect } from 'preact/hooks'
+import AuthenticatedRoute from 'components/AuthenticatedRoute'
 import Cart from 'pages/Cart'
 import Menu from 'pages/Menu'
 import Router, { Route } from 'preact-router'
@@ -13,8 +14,8 @@ export default function () {
   return (
     <Router>
       <Route path="/login/webapp" component={WebApp} />
-      <Route path="/" component={Menu} />
-      <Route path="/cart" component={Cart} />
+      <AuthenticatedRoute path="/" component={Menu} />
+      <AuthenticatedRoute path="/cart" component={Cart} />
     </Router>
   )
 }
