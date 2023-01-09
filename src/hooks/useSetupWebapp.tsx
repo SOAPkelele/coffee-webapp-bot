@@ -17,6 +17,7 @@ export default function () {
         switch (status) {
           case 'paid':
             Telegram.WebApp.close()
+            CartStore.items = []
             break
           default:
             Telegram.WebApp.showAlert('Ты не оплатил, заказ отменен :(')
