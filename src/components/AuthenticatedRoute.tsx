@@ -6,14 +6,12 @@ import UserStore from 'stores/UserStore'
 export default function (props: any) {
   const { user } = useSnapshot(UserStore)
 
-  // only redirect once we've cleared the screen:
   useEffect(() => {
     if (!user) {
-      route('/login', true) // TODO CHECK
+      route('/login/webapp', true)
     }
   }, [user])
 
-  // not logged in, render nothing:
   if (!user) return null
 
   return <Route {...props} />

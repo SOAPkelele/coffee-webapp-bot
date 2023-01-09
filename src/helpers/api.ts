@@ -4,7 +4,7 @@ import env from 'helpers/env'
 
 const base = env.VITE_APP_BASE_URL
 
-export default async function loginTelegram(telegram: object) {
+export async function loginTelegram(telegram: object) {
   return (
     await axios({
       method: 'post',
@@ -12,4 +12,19 @@ export default async function loginTelegram(telegram: object) {
       data: telegram,
     })
   ).data as User
+}
+
+export async function createPayment(
+  user: User,
+  items: { name: string; amount: number }[]
+) {
+  return (
+    await axios(`${base}/payment/telegram/`, {
+      method: 'post',
+      headers: {
+        token: user.token,
+      },
+      data: { items: items },
+    })
+  ).data as string
 }
